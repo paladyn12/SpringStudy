@@ -6,7 +6,7 @@ public class MemberServideImpl implements MemberService{
 
     @Override
     public void join(Member member) {
-
+        memberRepository.save(member);
     }
 
     @Override
