@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 public class memberServiceTest {
 
-    MemberService memberService = new MemberServideImpl();
+    MemberService memberService = new MemberServiceImpl();
     @Test
     void join(){
         //given
