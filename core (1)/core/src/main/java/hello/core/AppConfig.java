@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class AppConfig {// 실제 동작에 필요한 구현 객체들을 생성, 생성자를 통해 주입(생성자 주입)
+public class AppConfig { // 실제 동작에 필요한 구현 객체들을 생성, 생성자를 통해 주입(생성자 주입)
 
     @Bean
     public MemberRepository memberRepository() {

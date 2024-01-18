@@ -14,7 +14,7 @@ public class MemberApp {
 //        MemberService memberService = appConfig.memberService();
 
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
-        //AppConfig의 환경 정보을 가지고 applicationContext가 관리
+        // AppConfig의 환경 정보을 가지고 applicationContext가 관리
         MemberService memberService = applicationContext.getBean("memberService", MemberService.class);
 
         Member member = new Member(1L, "memberA", Grade.VIP);
