@@ -8,8 +8,8 @@ public class MemberServiceImpl implements MemberService{
 
     private final MemberRepository memberRepository;
 
-    @Autowired  //Component의 생성자에 @Autowired를 붙여 의존관계 주입
-                //ac.getBean(MemberRepository.class)가 자동으로 들어가는 느낌
+    //Component의 생성자에 @Autowired를 붙여 의존관계 주입
+    @Autowired  //ac.getBean(MemberRepository.class)가 자동으로 들어가는 느낌
     public MemberServiceImpl(MemberRepository memberRepository){
         this.memberRepository = memberRepository;
     }

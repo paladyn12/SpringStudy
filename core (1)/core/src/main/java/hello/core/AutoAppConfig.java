@@ -11,7 +11,7 @@ import org.springframework.context.annotation.FilterType;
         //@Configuration도 올라가보면 @Component가 붙어있음
         excludeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION, classes = Configuration.class),
 
-        basePackages = "hello.core.member"//해당 패키지부터 하위 패키지만 찾아감
+        basePackages = "hello.core"//해당 패키지부터 하위 패키지만 찾아감
         //지정하지 않으면 @ComponentScan이 붙은 설정 정보 클래스의 패키지가 시작 위치
         //권장 방법 : 따로 지정하지 않고 설정 정보 클래스의 위치를 프로젝트 최상단에 두기
         )
