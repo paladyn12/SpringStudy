@@ -29,9 +29,9 @@ public class ComponentFilterAppConfigTest {
 
     @Configuration
     @ComponentScan(
-            //includeFilters에 MyIncludeComponent 애노테이션을 추가하여 BeanA가 스프링 빈에 등록됨
+            //includeFilters에 MyIncludeComponent 애노테이션을 추가해 BeanA가 스프링 빈에 등록됨
             includeFilters = @Filter(type = FilterType.ANNOTATION, classes = MyIncludeComponent.class),
-            //excludeFilters에 MyExcludeComponent 애노테이션을 추가하여 BeanB가 스프링 빈에 등록되지 않음
+            //excludeFilters에 MyExcludeComponent 애노테이션을 추가해 BeanB가 스프링 빈에 등록되지 않음
             excludeFilters = @Filter(type = FilterType.ANNOTATION, classes = MyExcludeComponent.class)
     )
     static class ComponentFilterAppConfig{
