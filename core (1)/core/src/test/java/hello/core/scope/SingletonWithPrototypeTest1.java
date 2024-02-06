@@ -34,7 +34,7 @@ public class SingletonWithPrototypeTest1 {
 
         ClientBean clientBean2 = ac.getBean(ClientBean.class);
         int count2 = clientBean2.logic();
-        Assertions.assertThat(count2).isEqualTo(2);
+        Assertions.assertThat(count2).isEqualTo(3);
         //프로토타입 빈은 싱글톤 빈이 생성될 때 할당, 이후 새로 생겨나지 않게됨, 문제 발생
     }
 
