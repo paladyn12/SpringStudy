@@ -23,4 +23,5 @@ public class Member {
     //Order 테이블의 member 필드에 의해 매핑됨, FK는 Order 쪽에 있음
     @OneToMany(mappedBy = "member") //Order와 Member는 다대일 관계, Member가 일이므로 @OneToMany 애노테이션
     private List<Order> orders = new ArrayList<Order>();
+
 }
