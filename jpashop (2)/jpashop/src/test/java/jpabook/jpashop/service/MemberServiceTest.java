@@ -29,7 +29,7 @@ public class MemberServiceTest {
     public void 회원가입() throws Exception{
         //given
         Member member = new Member();
-        member.setName("kim");
+        member.setName("Lee");
         
         //when
         Long savedId = memberService.join(member);
