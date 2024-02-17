@@ -19,7 +19,7 @@ public class MemberService {
     @Transactional //쓰기 서비스는 따로 설정. readOnly = false가 들어감
     public Long join(Member member){
 
-        validateDuplicateMember(member); //중복 회원  검증
+        validateDuplicateMember(member); //중복 회원 검증
         memberRepository.save(member);
         return member.getId();
     }
