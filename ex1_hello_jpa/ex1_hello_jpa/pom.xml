@@ -15,7 +15,7 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>5.3.10.Final</version> <!--5.3.10.Final을 변경 -->
+            <version>6.4.1.Final</version> <!--5.3.10.Final을 변경 -->
         </dependency>
         <!-- H2 데이터베이스 -->
         <dependency>
