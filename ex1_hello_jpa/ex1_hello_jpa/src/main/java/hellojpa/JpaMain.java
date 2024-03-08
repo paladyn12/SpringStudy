@@ -5,7 +5,6 @@ import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Persistence;
 
-import java.util.List;
 
 public class JpaMain {
     public static void main(String[] args) {
@@ -16,12 +15,8 @@ public class JpaMain {
         tx.begin();
 
         try{
-            List<Member> resultList = em.createQuery("select m from Member as m", Member.class)
-                    .getResultList();
-            for(Member m : resultList)
-                System.out.println("result = " + m.getName());
 
-            //em.persist(member); 컬렉션 다루듯 설계되어 다시 persist 하지 않음
+            Member member = em.find(Member.class, 10L);
 
             tx.commit();
         }catch (Exception e){
