@@ -21,7 +21,7 @@
             <!--쿼리를 size만큼 모아 한번에 보냄, 버퍼링-->
             <!--property name="hibernate.jdbc.batch_size" value="10"/-->
             <!--애플리케이션을 종료시키면 DB 초기화-->
-            <!--property name="hibernate.hbm2ddl.auto" value="create" /-->
+            <property name="hibernate.hbm2ddl.auto" value="none" />
         </properties>
     </persistence-unit>
 </persistence>
