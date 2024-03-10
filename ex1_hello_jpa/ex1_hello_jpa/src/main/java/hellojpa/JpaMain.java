@@ -19,8 +19,8 @@ public class JpaMain {
             member1.setName("A");
             Member member2 = new Member();
             member2.setName("A");
-            Member member3 = new Member();
-            member3.setName("A");
+            Member member4 = new Member();
+            member4.setName("A");
 
             em.persist(member1);
 //            em.persist(member2);
@@ -28,7 +28,7 @@ public class JpaMain {
 
             System.out.println("member1 = " + member1.getId());
             System.out.println("member2 = " + member2.getId());
-            System.out.println("member3 = " + member3.getId());
+            System.out.println("member3 = " + member4.getId());
 
             tx.commit();
         }catch (Exception e){
