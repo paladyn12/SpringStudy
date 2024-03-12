@@ -3,6 +3,8 @@ package jpabook.domain;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Date;
 
 @Entity
 @Table(name = "ORDERS")
@@ -12,12 +14,18 @@ public class Order {
     @Column(name = "ORDER_ID")
     private Long id;
 
-    @Column(name = "MEMBER_ID")
-    private Long memberId;
+    @ManyToOne
+    @JoinColumn(name = "MEMBER_ID")
+    private Member member;
 
-    private LocalDateTime orderDate;
+    @OneToMany(mappedBy = "order")
+    private ArrayList<OrderItem> orderItems = new ArrayList<>();
 
-    @Enumerated(EnumType.STRING) //ORDINAL X
+    private Date orderDate;
     private OrderStatus status;
 
+    public void addOrderItem(OrderItem orderItem){
+        orderItems.add(orderItem);
+        orderItem.setOrder(this);
+    }
 }
