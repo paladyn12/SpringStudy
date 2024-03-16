@@ -21,7 +21,6 @@ public class Order {
     @OneToMany(mappedBy = "order")
     private ArrayList<OrderItem> orderItems = new ArrayList<>();
 
-    int test;
 
     private Date orderDate;
     private OrderStatus status;
