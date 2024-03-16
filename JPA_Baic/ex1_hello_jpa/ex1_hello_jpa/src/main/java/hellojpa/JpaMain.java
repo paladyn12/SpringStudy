@@ -18,18 +18,19 @@ public class JpaMain {
 
         try{
 
+            Member member1 = new Member();
+            member1.setUsername("KIM");
+            Member member2 = new Member();
+            member2.setUsername("KIM");
+            em.persist(member1);
+            em.persist(member2);
+
             Team team = new Team();
-            team.setName("team1");
+            team.setName("Team1");
+            team.getMembers().add(member1);
+            team.getMembers().add(member2);
+
             em.persist(team);
-
-            Member member = new Member();
-            member.setUsername("Kim");
-            member.changeTeam(team);
-            em.persist(member);
-
-            Member findMember = em.find(Member.class, member.getId());
-            System.out.println("findMember.getUsername() = " + findMember.getUsername());
-
 
             tx.commit();
         }catch (Exception e){

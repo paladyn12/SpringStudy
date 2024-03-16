@@ -21,7 +21,10 @@ public class Order {
     @OneToMany(mappedBy = "order")
     private ArrayList<OrderItem> orderItems = new ArrayList<>();
 
-    int test;
+    @OneToOne
+    @JoinColumn(name = "DELIVERY_ID")
+    private Delivery delivery;
+
 
     private Date orderDate;
     private OrderStatus status;
