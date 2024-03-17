@@ -19,7 +19,6 @@ public class JpaMain {
 
             Book book = new Book();
             book.setName("b1");
-            book.setAuthor("KIM");
             em.persist(book);
 
 
