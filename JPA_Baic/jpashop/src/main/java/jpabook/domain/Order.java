@@ -29,8 +29,5 @@ public class Order {
     private Date orderDate;
     private OrderStatus status;
 
-    public void addOrderItem(OrderItem orderItem){
-        orderItems.add(orderItem);
-        orderItem.setOrder(this);
-    }
+
 }
