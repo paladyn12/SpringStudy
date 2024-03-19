@@ -8,7 +8,7 @@ import java.util.Objects;
 @Embeddable
 public class Address {
 
-    @Column(length = 10)
+    @Column(length = 15)
     private String city;
     @Column(length = 20)
     private String street;
