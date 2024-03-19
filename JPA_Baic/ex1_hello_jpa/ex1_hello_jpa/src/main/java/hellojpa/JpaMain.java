@@ -18,19 +18,19 @@ public class JpaMain {
 
         try{
 
-            Member member1 = new Member();
-            member1.setUsername("KIM");
-            Member member2 = new Member();
-            member2.setUsername("KIM");
-            em.persist(member1);
-            em.persist(member2);
+            Member member = new Member();
+            member.setUsername("KIM");
+            member.setHomeAddress(new Address("homeCity","street","zipcode"));
 
-            Team team = new Team();
-            team.setName("Team1");
-            team.getMembers().add(member1);
-            team.getMembers().add(member2);
+            member.getFavoriteFoods().add("치킨");
+            member.getFavoriteFoods().add("피자");
 
-            em.persist(team);
+            member.getAddressHistory().add(new Address("old1","street","zipcode"));
+            member.getAddressHistory().add(new Address("old2","street","zipcode"));
+
+            em.persist(member);
+            em.flush();
+            em.clear();
 
             tx.commit();
         }catch (Exception e){

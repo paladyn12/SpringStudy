@@ -15,9 +15,17 @@ public class Member {
     private ArrayList<Order> orders = new ArrayList<>();
 
     private String name;
-    private String city;
-    private String street;
-    private String zipcode;
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    @Embedded
+    private Address address;
 
     public Member(){}
 
