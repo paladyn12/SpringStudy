@@ -21,7 +21,7 @@ public class Order {
     private int orderAmount;
 
     @Embedded
-    private Address address;
+    private Address address1;
 
     @ManyToOne
     @JoinColumn(name = "PRODUCT_ID")
