@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 @Entity
 public class CategoryItem {
 
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "CATEGORY_ITEM_ID")
     private Long id;
 

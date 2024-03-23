@@ -9,7 +9,7 @@ import java.util.ArrayList;
 @DiscriminatorColumn
 public abstract class Item {
 
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ITEM_ID")
     private Long id;
 
@@ -56,7 +56,5 @@ public abstract class Item {
         this.stockQuantity = stockQuantity;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+
 }

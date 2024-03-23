@@ -1,10 +1,9 @@
 package jpabook;
 
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityManagerFactory;
-import jakarta.persistence.EntityTransaction;
-import jakarta.persistence.Persistence;
+import jakarta.persistence.*;
 import jpabook.domain.*;
+
+import java.util.List;
 
 
 public class JpaMain {
@@ -18,9 +17,16 @@ public class JpaMain {
         try{
 
             Member member = new Member();
-            Team team = new Team();
             member.setName("member1");
+            member.setAge(10);
             em.persist(member);
+
+            em.flush();
+            em.clear();
+
+            String query = "select i From Item i where type(i)=Book";
+
+            Query query1 = em.createQuery(query);
 
             tx.commit();
         }catch (Exception e){

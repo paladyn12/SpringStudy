@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 @Entity
 public class Child {
 
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
 
@@ -25,9 +25,7 @@ public class Child {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+
 
     public String getName() {
         return name;

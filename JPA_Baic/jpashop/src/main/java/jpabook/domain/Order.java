@@ -10,7 +10,7 @@ import java.util.Date;
 @Table(name = "ORDERS")
 public class Order {
 
-    @Id @GeneratedValue //입력 안하면 default는 AUTO
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY) //입력 안하면 default는 AUTO
     @Column(name = "ORDER_ID")
     private Long id;
 
@@ -21,7 +21,7 @@ public class Order {
     private int orderAmount;
 
     @Embedded
-    private Address address1;
+    private Address address;
 
     @ManyToOne
     @JoinColumn(name = "PRODUCT_ID")
@@ -37,9 +37,7 @@ public class Order {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+
 
     public Member getMember() {
         return member;
