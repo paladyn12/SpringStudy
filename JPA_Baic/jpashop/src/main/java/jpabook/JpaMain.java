@@ -28,6 +28,8 @@ public class JpaMain {
 
             Query query1 = em.createQuery(query);
 
+            //end
+
             tx.commit();
         }catch (Exception e){
             tx.rollback();
