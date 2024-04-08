@@ -47,6 +47,7 @@ public class RequestBodyStringController {
         String message = httpEntity.getBody();
         log.info("message={}", message);
 
+
         return new HttpEntity<>("ok");
     }
 
