@@ -26,7 +26,6 @@ public class OrderRepositoryV4 {
             }
         };
         template.excute("OrderRepository.save()");
-
     }
 
     private void sleep(int millis) {
