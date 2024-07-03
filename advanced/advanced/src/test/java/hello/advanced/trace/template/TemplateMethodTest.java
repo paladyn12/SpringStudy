@@ -46,7 +46,7 @@ public class TemplateMethodTest {
     }
 
     @Test
-    public void emplateMethodV2() { //생성과 동시에 메서드 구현
+    public void templateMethodV2() { //생성과 동시에 메서드 구현
         AbstractTemplate template1 = new AbstractTemplate() {
             @Override
             protected void call() {
