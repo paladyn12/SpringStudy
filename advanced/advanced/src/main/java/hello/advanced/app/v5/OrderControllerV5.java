@@ -21,7 +21,6 @@ public class OrderControllerV5 {
 
     @GetMapping("/v5/request")
     public String request(String itemId) { //템플릿에 람다식으로 콜백 함수를 넣음
-
         return template.execute("OrderController.request()", () -> {
             orderService.orderItem(itemId);
             return "ok";
