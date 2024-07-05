@@ -1,4 +1,4 @@
-package hello.advanced.trace.strategy.code;
+package hello.advanced.trace.strategy;
 
 import hello.advanced.trace.strategy.code.strategy.ContextV2;
 import hello.advanced.trace.strategy.code.strategy.Strategy;
@@ -13,6 +13,8 @@ public class ContextV2Test {
     /**
      * 전략 패턴 적용
      */
+
+
 
     @Test
     public void strategyV1() {
