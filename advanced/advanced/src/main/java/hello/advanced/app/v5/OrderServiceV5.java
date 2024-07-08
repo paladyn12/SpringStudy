@@ -17,7 +17,6 @@ public class OrderServiceV5 {
         this.template = new TraceTemplate(trace);
     }
 
-
     public void orderItem(String itemId) {
         template.execute("OrderService.orderItem()", () -> {
             orderRepository.save(itemId);
