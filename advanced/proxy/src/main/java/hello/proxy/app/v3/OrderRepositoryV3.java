@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 public class OrderRepositoryV3 {
 
     public void save(String itemId) {
+
         //저장 로직
         if (itemId.equals("ex")) {
             throw new IllegalStateException("예외 발생!");
@@ -14,6 +15,7 @@ public class OrderRepositoryV3 {
     }
 
     private void sleep(int millis) {
+
         try {
             Thread.sleep(millis);
         } catch (InterruptedException e) {
