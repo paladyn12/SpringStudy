@@ -12,7 +12,6 @@ public class RealSubject implements Subject{
     }
 
     private void sleep(int millis) {
-
         try {
             Thread.sleep(millis);
         } catch (InterruptedException e) {
