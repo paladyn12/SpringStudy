@@ -14,6 +14,5 @@ public class ProxyPatternTest {
         client.execute();
         client.execute();
         //총 3초 소요
-
     }
 }
