@@ -1,6 +1,9 @@
 package hello.proxy.app.v2;
 
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
+@Repository
 public class OrderRepositoryV2 {
 
     public void save(String itemId) {
