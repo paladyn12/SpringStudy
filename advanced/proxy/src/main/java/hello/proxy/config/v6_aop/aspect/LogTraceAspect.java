@@ -25,6 +25,7 @@ public class LogTraceAspect {
         try {
             String message = joinPoint.getSignature().toShortString();
             status = logTrace.begin(message);
+
             //실행 로직
             Object result = joinPoint.proceed();
 
